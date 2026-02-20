@@ -1,0 +1,7 @@
+{
+  "name": "Dhikr - ذكري",
+  "description": "A modern, minimalist Islamic application focused on spirituality and elegance.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>ذكري</title>
+    <link rel="icon" type="image/png" href="https://i.ibb.co/MxFwCgqh/Whats-App-Image-2026-02-15-at-6-41-39-AM-removebg-preview.png">
+    <link rel="apple-touch-icon" href="https://i.ibb.co/MxFwCgqh/Whats-App-Image-2026-02-15-at-6-41-39-AM-removebg-preview.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+      /* Modern Quran Font: Uthmanic Hafs */
+      @font-face {
+        font-family: 'Uthmani';
+        /* Using the requested local file path. Ensure this file exists in your public/fonts folder. */
+        src: url('/fonts/alfont_com_UthmanicHafs1-Ver18.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      body {
+        background-color: #022c22; /* Emerald 950 - Deep Green */
+        background-image: linear-gradient(to bottom, #022c22, #064e3b);
+        color: #f0fdf4;
+        -webkit-tap-highlight-color: transparent;
+        font-family: 'IBM Plex Sans Arabic', sans-serif;
+        min-height: 100vh;
+      }
+      
+      .font-serif {
+        font-family: 'Amiri', serif;
+      }
+
+      .font-mushaf {
+        font-family: 'Uthmani', serif;
+        line-height: 2.2;
+      }
+
+      .no-scrollbar::-webkit-scrollbar { display: none; }
+      .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+      
+      /* Glass effect for dark theme */
+      .glass-panel {
+        background: rgba(255, 255, 255, 0.03);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['IBM Plex Sans Arabic', 'sans-serif'],
+              serif: ['Amiri', 'serif'], 
+              mushaf: ['"Uthmani"', 'serif'],
+            },
+            colors: {
+              primary: {
+                DEFAULT: '#022c22', // Emerald 950
+                light: '#064e3b',   // Emerald 900
+                lighter: '#10b981', // Emerald 500 (Accents)
+              },
+              brand: {
+                green: '#047857', // Emerald 700
+                gold: '#fbbf24', // Amber 400
+                goldDim: '#d97706', // Amber 600
+                surface: '#ffffff',
+              },
+            },
+            boxShadow: {
+              'glow': '0 0 20px rgba(16, 185, 129, 0.15)',
+              'gold-glow': '0 0 15px rgba(251, 191, 36, 0.1)',
+            },
+            borderRadius: {
+              '4xl': '2.5rem',
+            }
+          }
+        }
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "lucide-react": "https://esm.sh/lucide-react@^0.564.0",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
